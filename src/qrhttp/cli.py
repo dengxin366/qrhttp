@@ -26,7 +26,7 @@ def print_qr_code(url):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Terminal QR Code HTTP Server (qrhttp)"
+        description="qrhttp, http.server like server with an QR code in terminal"
     )
     parser.add_argument(
         "port",
@@ -42,14 +42,14 @@ def main():
     url = f"http://{local_ip}:{port}"
 
     print("\n" + "=" * 50)
-    print(f" HTTP Server 运行中...")
-    print(f" 局域网访问地址: {url}")
-    print(" 手机请连接同一 Wi-Fi 后扫码访问：")
+    print(f" Http server running ...")
+    print(f" Url: {url}")
+    print(f" Please scan after the phone connects the same Wi-Fi：")
     print("=" * 50 + "\n")
 
     print_qr_code(url)
 
-    print("\n按 Ctrl+C 停止服务...\n")
+    print("\nPress Ctrl+C to stop server...\n")
 
     server_address = ("", port)
     httpd = HTTPServer(server_address, SimpleHTTPRequestHandler)
@@ -57,7 +57,7 @@ def main():
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
-        print("\n服务器已停止。")
+        print("\nServer stopped.")
         sys.exit(0)
 
 
