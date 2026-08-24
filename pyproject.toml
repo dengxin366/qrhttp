@@ -1,6 +1,6 @@
 [project]
 name = "qrhttp"
-version = "0.0.2"
+version = "0.0.3"
 description = "http server with qr code"
 readme = "README.md"
 authors = [
