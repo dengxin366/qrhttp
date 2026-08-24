@@ -1,6 +1,6 @@
 [project]
 name = "qrhttp"
-version = "0.0.1"
+version = "0.0.2"
 description = "http server with qr code"
 readme = "README.md"
 authors = [
@@ -10,6 +10,12 @@ requires-python = ">=3.10"
 dependencies = [
     "qrcode>=8.2",
 ]
+
+[project.urls]
+Homepage = "https://github.com/dengxin366/qrhttp"
+Repository = "https://github.com/dengxin366/qrhttp"
+Issues = "https://github.com/dengxin366/qrhttp/issues"
+Documentation = "https://github.com/dengxin366/qrhttp#readme"
 
 [project.scripts]
 qrhttp = "qrhttp.cli:main"
