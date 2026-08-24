@@ -12,7 +12,7 @@ pip install qrhttp
 # Usage
 
 ```bash
-python -m qrhttp 8001
+python -m qrhttp.cli 8001
 ```
 
 or 
