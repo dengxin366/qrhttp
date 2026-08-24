@@ -1,0 +1,19 @@
+[project]
+name = "qrhttp"
+version = "0.0.1"
+description = "http server with qr code"
+readme = "README.md"
+authors = [
+    { name = "dengxin366", email = "dengxin366@163.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "qrcode>=8.2",
+]
+
+[project.scripts]
+qrhttp = "qrhttp.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
